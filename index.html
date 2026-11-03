@@ -2,6 +2,14 @@
 <html lang="en">
 <head>
 <meta charset="utf-8">
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=AW-11293037324"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'AW-11293037324');
+</script>
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <link rel="canonical" href="https://pioneeracademymunirka.com/">
 <title>Pioneer Academy Munirka</title>
@@ -286,5 +294,18 @@ document.getElementById('f').addEventListener('submit', function(e){
 });
 </script>
 
+<script>
+/* Google Ads conversions: one event per tap on any call or WhatsApp link */
+(function(){
+  var CALL='AW-11293037324/IZjjCKy0prEdEIym-Igq', WA='AW-11293037324/jZTtCN_YpbEdEIym-Igq';
+  function fire(id){ try{ gtag('event','conversion',{send_to:id, value:1.0, currency:'INR'}); }catch(e){} }
+  document.addEventListener('click', function(e){
+    var a = e.target.closest && e.target.closest('a[href]'); if(!a) return;
+    var h = a.getAttribute('href') || '';
+    if(h.indexOf('tel:')===0) fire(CALL);
+    else if(h.indexOf('wa.me/')>-1) fire(WA);
+  }, true);
+})();
+</script>
 </body>
 </html>
