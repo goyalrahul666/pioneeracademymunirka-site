@@ -1,0 +1,290 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<link rel="canonical" href="https://pioneeracademymunirka.com/">
+<title>Pioneer Academy Munirka</title>
+<meta name="description" content="SSC, Bank, Railway, Police, Defence and CUET coaching in Munirka, Delhi since 2014. Rated 4.9 by 412 students on Google.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700;800;900&family=Mukta:wght@400;500;700&family=IBM+Plex+Mono:wght@500&display=swap">
+<style>
+html{-webkit-text-size-adjust:100%}body{margin:0}img{max-width:100%}[hidden]{display:none!important}
+
+/* Layout: an exam-hall notice board. Bold poster headline, an admit-card proof panel,
+   courses as an OMR answer grid, enquiry form with OMR bubbles, sticky call bar on phones. */
+:root{
+  --paper:#F7F8F5; --card:#FFFFFF; --ink:#13203B; --muted:#55607A; --line:#D7DCE4;
+  --red:#C8232C; --red-ink:#FFFFFF; --omr:#E9EEF7; --wa:#1F8A4C;
+  --display:"Big Shoulders Display", "Arial Narrow", Impact, sans-serif;
+  --body:"Mukta", "Noto Sans Devanagari", system-ui, sans-serif;
+  --mono:"IBM Plex Mono", ui-monospace, Menlo, monospace;
+}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
+  --paper:#0F1626; --card:#172036; --ink:#EEF1F7; --muted:#A3ADC2; --line:#2A3550;
+  --red:#F0525A; --red-ink:#1A0507; --omr:#1E2944; --wa:#3DBE76; color-scheme:dark}}
+:root[data-theme="dark"]{
+  --paper:#0F1626; --card:#172036; --ink:#EEF1F7; --muted:#A3ADC2; --line:#2A3550;
+  --red:#F0525A; --red-ink:#1A0507; --omr:#1E2944; --wa:#3DBE76; color-scheme:dark}
+
+*{box-sizing:border-box}
+body{background:var(--paper);color:var(--ink);font-family:var(--body);font-size:17px;line-height:1.55;
+  padding-left:max(16px, env(safe-area-inset-left, 0px));padding-right:max(16px, env(safe-area-inset-right, 0px));
+  padding-block:0 96px}
+.wrap{max-width:1080px;margin:0 auto}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--red);outline-offset:3px;border-radius:4px}
+h1,h2,h3{font-family:var(--display);line-height:.95;text-wrap:balance;margin:0;letter-spacing:.005em}
+.label{font-family:var(--mono);font-size:12px;letter-spacing:.12em;text-transform:uppercase;color:var(--muted)}
+
+/* top strip */
+.top{display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap;padding-block:18px;border-bottom:2px solid var(--ink)}
+.brand{display:flex;align-items:center;gap:10px;font-family:var(--display);font-weight:900;font-size:26px;text-transform:uppercase}
+.mark{width:38px;height:38px;border-radius:50%;background:var(--red);color:var(--red-ink);display:grid;place-items:center;font-size:24px}
+.top .phone{font-family:var(--mono);font-size:15px;text-decoration:none;border:2px solid var(--ink);padding:6px 12px;border-radius:999px;font-variant-numeric:tabular-nums}
+
+/* hero */
+.hero{display:grid;grid-template-columns:1.35fr 1fr;gap:40px;padding-block:44px 36px;align-items:start}
+.hero > *{min-width:0}
+.hindi{font-weight:700;color:var(--red);font-size:20px;margin:0 0 10px}
+.hero h1{font-size:clamp(52px, 9vw, 104px);font-weight:900;text-transform:uppercase}
+.hero h1 em{font-style:normal;color:var(--red)}
+.lede{max-width:34em;color:var(--muted);font-size:19px;margin:22px 0 26px}
+.ctas{display:flex;gap:12px;flex-wrap:wrap}
+.btn{display:inline-flex;align-items:center;gap:8px;font-weight:700;font-size:17px;text-decoration:none;padding:13px 22px;border-radius:999px;border:2px solid var(--ink);cursor:pointer;background:transparent;color:var(--ink);font-family:var(--body)}
+.btn.primary{background:var(--red);border-color:var(--red);color:var(--red-ink)}
+.btn.wa{background:var(--wa);border-color:var(--wa);color:#fff}
+.btn:hover{transform:translateY(-1px)}
+
+/* admit card */
+.admit{background:var(--card);border:2px solid var(--ink);border-radius:6px;position:relative;overflow:hidden}
+.admit header{background:var(--ink);color:var(--paper);padding:10px 16px;display:flex;justify-content:space-between;gap:8px;flex-wrap:wrap}
+.admit header span{font-family:var(--mono);font-size:12px;letter-spacing:.12em;text-transform:uppercase}
+.admit .rows{padding:6px 16px 14px}
+.row{display:grid;grid-template-columns:118px 1fr;gap:12px;padding:11px 0;border-bottom:1px dashed var(--line)}
+.row:last-child{border-bottom:0}
+.row .v{font-weight:700;min-width:0}
+.big{font-family:var(--display);font-size:44px;font-weight:900;line-height:1}
+.stars{color:var(--red);letter-spacing:2px}
+.stamp{position:absolute;right:14px;bottom:14px;border:3px solid var(--red);color:var(--red);font-family:var(--display);font-weight:900;font-size:18px;text-transform:uppercase;padding:4px 10px;transform:rotate(-8deg);opacity:.85;line-height:1.1;text-align:center}
+
+/* section */
+section{padding-block:40px;border-top:2px solid var(--ink)}
+.sec-head{display:flex;justify-content:space-between;align-items:end;gap:16px;flex-wrap:wrap;margin-bottom:24px}
+.sec-head h2{font-size:clamp(38px,6vw,60px);font-weight:900;text-transform:uppercase}
+.sec-head p{margin:0;color:var(--muted);max-width:30em}
+
+/* OMR course grid */
+.omr{display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:0;border:2px solid var(--ink);border-radius:6px;overflow:hidden;background:var(--card)}
+.q{padding:18px;border-right:1px solid var(--line);border-bottom:1px solid var(--line);display:grid;grid-template-columns:auto 1fr;gap:6px 14px;align-content:start}
+.qn{font-family:var(--mono);font-size:13px;color:var(--muted);padding-top:4px;font-variant-numeric:tabular-nums}
+.q h3{font-size:28px;font-weight:800;text-transform:uppercase}
+.q p{grid-column:2;margin:0;color:var(--muted);font-size:15px}
+.bubbles{grid-column:2;display:flex;gap:6px;flex-wrap:wrap;margin-top:6px}
+.bubbles span{font-family:var(--mono);font-size:11px;letter-spacing:.06em;border:1.5px solid var(--ink);border-radius:999px;padding:2px 9px}
+.q.special{background:var(--omr)}
+
+/* why */
+.why{display:grid;grid-template-columns:repeat(4,1fr);gap:24px}
+.why div{border-top:4px solid var(--red);padding-top:12px}
+.why b{font-family:var(--display);font-size:36px;font-weight:900;display:block;line-height:1}
+.why span{color:var(--muted);font-size:15px}
+
+/* reviews */
+.reviews{display:grid;grid-template-columns:1fr 1fr;gap:24px}
+blockquote{margin:0;background:var(--card);border:1px solid var(--line);border-radius:6px;padding:22px}
+blockquote p{margin:0 0 12px;font-size:18px}
+blockquote footer{font-family:var(--mono);font-size:13px;color:var(--muted)}
+.more{display:inline-block;margin-top:16px;font-weight:700}
+
+/* enquiry */
+.enq{display:grid;grid-template-columns:1fr 1.2fr;gap:40px}
+.enq > *{min-width:0}
+form{background:var(--card);border:2px solid var(--ink);border-radius:6px;padding:22px;display:grid;gap:16px}
+label.f{display:grid;gap:6px;font-weight:700}
+input[type=text],input[type=tel]{font:inherit;padding:12px 14px;border:1.5px solid var(--line);border-radius:6px;background:var(--paper);color:var(--ink);width:100%}
+input:focus{border-color:var(--ink);outline:none}
+fieldset{border:0;margin:0;padding:0}
+legend{font-weight:700;margin-bottom:8px}
+.omr-pick{display:grid;grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:8px}
+.omr-pick label{display:flex;align-items:center;gap:10px;font-size:15px;cursor:pointer;padding:6px 4px}
+.omr-pick input{appearance:none;width:22px;height:22px;border:2px solid var(--ink);border-radius:50%;margin:0;flex:none;display:grid;place-items:center;cursor:pointer}
+.omr-pick input:checked{background:var(--ink);box-shadow:inset 0 0 0 3px var(--card)}
+.note{font-size:14px;color:var(--muted);margin:0}
+.err{color:var(--red);font-size:14px;font-weight:700;margin:0}
+
+/* visit */
+.visit{display:grid;grid-template-columns:1.3fr 1fr;gap:32px;align-items:start}
+.visit address{font-style:normal;font-size:22px;font-weight:700;line-height:1.35}
+table.hours{border-collapse:collapse;width:100%;font-variant-numeric:tabular-nums}
+table.hours td{padding:7px 0;border-bottom:1px dashed var(--line)}
+table.hours td:last-child{text-align:right;font-family:var(--mono);font-size:14px}
+
+footer.site{padding-block:28px;border-top:2px solid var(--ink);color:var(--muted);font-size:14px;display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
+
+/* sticky call bar (phones) */
+.bar{position:fixed;left:0;right:0;bottom:0;z-index:20;display:none;gap:10px;background:var(--paper);border-top:2px solid var(--ink);
+  padding:10px max(16px, env(safe-area-inset-right, 0px)) calc(10px + env(safe-area-inset-bottom, 0px)) max(16px, env(safe-area-inset-left, 0px))}
+.bar .btn{flex:1;justify-content:center;padding:12px 10px}
+
+@media (max-width: 820px){
+  .hero,.enq,.visit,.reviews{grid-template-columns:1fr}
+  .why{grid-template-columns:1fr 1fr}
+  .bar{display:flex}
+  .row{grid-template-columns:96px 1fr}
+}
+@media (min-width: 821px){ body{padding-block:0 24px} }
+@media (prefers-reduced-motion: reduce){ .btn:hover{transform:none} }
+</style>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"EducationalOrganization","name":"Pioneer Academy","url":"https://pioneeracademymunirka.com/","telephone":"+91-9311775461","foundingDate":"2014",
+"address":{"@type":"PostalAddress","streetAddress":"No. 736, UGF, D-211 Laxman Plaza, near Bank of Baroda, Munirka","addressLocality":"New Delhi","postalCode":"110067","addressCountry":"IN"},
+"geo":{"@type":"GeoCoordinates","latitude":28.5571776,"longitude":77.1724888},
+"openingHours":"Mo-Su 09:00-20:00"}
+</script>
+</head>
+<body>
+
+<div class="wrap">
+  <div class="top">
+    <div class="brand"><span class="mark" aria-hidden="true">P</span> Pioneer Academy</div>
+    <a class="phone" href="tel:+919311775461">093117 75461</a>
+  </div>
+
+  <div class="hero">
+    <div>
+      <p class="hindi">सरकारी नौकरी की तैयारी, Munirka में</p>
+      <h1>SSC, Bank, Police &amp; Defence coaching in <em>Munirka</em></h1>
+      <p class="lede">Classroom coaching near Bank of Baroda, Munirka since 2014. Expert faculty, regular mock tests and personal mentoring, in Hindi and English medium.</p>
+      <div class="ctas">
+        <a class="btn primary" href="tel:+919311775461">Call 24×7: 093117 75461</a>
+        <a class="btn wa" href="https://wa.me/919311775461?text=Hi%20Pioneer%20Academy%2C%20I%20want%20details%20about%20your%20batches." target="_blank" rel="noopener">WhatsApp us</a>
+        <a class="btn" href="#enquire">Book a free demo class</a>
+      </div>
+    </div>
+
+    <aside class="admit" aria-label="Pioneer Academy at a glance">
+      <header><span>Admit card</span><span>Centre: Munirka</span></header>
+      <div class="rows">
+        <div class="row"><span class="label">Google rating</span><span class="v"><span class="big">4.9</span> <span class="stars" aria-hidden="true">★★★★★</span><br><a href="https://business.google.com/v/pioneer-academy/015817094640862562092/86bb/_/rev/" target="_blank" rel="noopener">412 student reviews</a></span></div>
+        <div class="row"><span class="label">Selections</span><span class="v">4,000+ aspirants in government jobs</span></div>
+        <div class="row"><span class="label">Since</span><span class="v">2014, Munirka</span></div>
+        <div class="row"><span class="label">Centre open</span><span class="v">9 AM – 8 PM, all 7 days</span></div>
+        <div class="row"><span class="label">Phone</span><span class="v">Answered 24 × 7</span></div>
+      </div>
+      <div class="stamp" aria-hidden="true">Free<br>demo</div>
+    </aside>
+  </div>
+
+  <section id="courses">
+    <div class="sec-head">
+      <h2>Courses</h2>
+      <p>Ask at the front desk for this month's batch timings and fees.</p>
+    </div>
+    <div class="omr">
+      <div class="q"><span class="qn">01</span><h3>SSC</h3><p>Full syllabus with mock tests</p><div class="bubbles"><span>CGL</span><span>CHSL</span><span>CPO</span><span>MTS</span></div></div>
+      <div class="q"><span class="qn">02</span><h3>Banking</h3><p>Prelims and mains preparation</p><div class="bubbles"><span>IBPS PO</span><span>IBPS Clerk</span><span>SBI PO</span><span>SBI Clerk</span></div></div>
+      <div class="q"><span class="qn">03</span><h3>Railways</h3><p>Technical and non-technical posts</p><div class="bubbles"><span>RRB NTPC</span></div></div>
+      <div class="q"><span class="qn">04</span><h3>Police</h3><p>Written exam preparation</p><div class="bubbles"><span>Delhi Police</span><span>UP Police</span><span>Haryana Police</span></div></div>
+      <div class="q"><span class="qn">05</span><h3>Defence</h3><p>Written exam preparation</p><div class="bubbles"><span>NDA</span><span>CDS</span><span>Airforce X/Y</span></div></div>
+      <div class="q"><span class="qn">06</span><h3>Teaching</h3><p>Teacher eligibility and recruitment</p><div class="bubbles"><span>DSSSB</span><span>CTET</span><span>KVS</span></div></div>
+      <div class="q"><span class="qn">07</span><h3>CUET</h3><p>University entrance preparation</p><div class="bubbles"><span>CUET UG</span></div></div>
+      <div class="q special"><span class="qn">08</span><h3>English medium</h3><p>Special SSC and Bank batch, popular with students from the Northeast</p><div class="bubbles"><span>SSC</span><span>Bank</span></div></div>
+    </div>
+  </section>
+
+  <section>
+    <div class="why">
+      <div><b>4.9★</b><span>Average from 412 Google reviews</span></div>
+      <div><b>4,000+</b><span>Selections in government jobs</span></div>
+      <div><b>12 yrs</b><span>Teaching in Munirka since 2014</span></div>
+      <div><b>6+</b><span>Centres, offline and online</span></div>
+    </div>
+  </section>
+
+  <section>
+    <div class="sec-head"><h2>Students say</h2></div>
+    <div class="reviews">
+      <blockquote><p>Teachers explain everything in the easiest manner. Mock tests are regular.</p><footer>Roshan Kumar · Google review</footer></blockquote>
+      <blockquote><p>The teachers are very supportive, knowledgeable, and friendly. Highly recommended!</p><footer>Ruchi Bharti · Google review</footer></blockquote>
+    </div>
+    <a class="more" href="https://business.google.com/v/pioneer-academy/015817094640862562092/86bb/_/rev/" target="_blank" rel="noopener">Read all 412 reviews on Google →</a>
+  </section>
+
+  <section id="enquire">
+    <div class="enq">
+      <div>
+        <p class="label">Free demo class</p>
+        <h2 style="font-size:clamp(38px,6vw,60px);font-weight:900;text-transform:uppercase;margin-top:6px">Sit in on a class before you join</h2>
+        <p class="lede">Fill your name and exam. Your details open in WhatsApp so you can send them to us, and we'll reply with batch timings and a demo slot.</p>
+        <p class="note">Prefer to talk? Call <strong>093117 75461</strong>, any time, day or night.</p>
+      </div>
+      <form id="f" novalidate>
+        <label class="f" for="name">Your name<input type="text" id="name" autocomplete="name" required></label>
+        <label class="f" for="mob">Mobile number<input type="tel" id="mob" inputmode="numeric" autocomplete="tel" placeholder="10-digit number" required></label>
+        <fieldset>
+          <legend>Which exam? Fill one bubble</legend>
+          <div class="omr-pick">
+            <label><input type="radio" name="exam" id="ex-ssc" value="SSC" checked> SSC</label>
+            <label><input type="radio" name="exam" id="ex-bank" value="Bank"> Bank</label>
+            <label><input type="radio" name="exam" id="ex-rly" value="Railway"> Railway</label>
+            <label><input type="radio" name="exam" id="ex-pol" value="Police"> Police</label>
+            <label><input type="radio" name="exam" id="ex-def" value="NDA / CDS"> NDA / CDS</label>
+            <label><input type="radio" name="exam" id="ex-tch" value="DSSSB / CTET"> DSSSB / CTET</label>
+            <label><input type="radio" name="exam" id="ex-cuet" value="CUET"> CUET</label>
+            <label><input type="radio" name="exam" id="ex-eng" value="English medium batch"> English medium</label>
+          </div>
+        </fieldset>
+        <p class="err" id="err" hidden></p>
+        <button class="btn primary" type="submit" id="send" style="justify-content:center">Send on WhatsApp</button>
+      </form>
+    </div>
+  </section>
+
+  <section id="visit">
+    <div class="visit">
+      <div>
+        <p class="label">Visit the centre</p>
+        <address>No. 736, UGF, D-211 Laxman Plaza,<br>near Bank of Baroda, Munirka,<br>New Delhi 110067</address>
+        <div class="ctas" style="margin-top:20px">
+          <a class="btn primary" href="https://www.google.com/maps/dir//Pioneer+Academy/data=!4m8!4m7!1m0!1m5!1m1!1s0x390d1dd873a7f123:0xccec4b4d16360730!2m2!1d77.1724888!2d28.5571776" target="_blank" rel="noopener">Get directions</a>
+        </div>
+      </div>
+      <table class="hours" aria-label="Opening hours">
+        <tr><td>Monday – Saturday</td><td>9:00 AM – 8:00 PM</td></tr>
+        <tr><td>Sunday</td><td>9:00 AM – 8:00 PM</td></tr>
+        <tr><td>Phone (24 × 7)</td><td>093117 75461</td></tr>
+      </table>
+    </div>
+  </section>
+
+  <footer class="site"><span>© Pioneer Academy, Munirka</span><span>Free study material on the Career Crack Hub YouTube channel</span></footer>
+</div>
+
+<div class="bar">
+  <a class="btn primary" href="tel:+919311775461">Call now</a>
+  <a class="btn wa" href="https://wa.me/919311775461" target="_blank" rel="noopener">WhatsApp</a>
+</div>
+
+<script>
+document.getElementById('f').addEventListener('submit', function(e){
+  e.preventDefault();
+  var name = document.getElementById('name').value.trim();
+  var mob = document.getElementById('mob').value.replace(/\D/g,'');
+  var err = document.getElementById('err');
+  if(!name){ err.textContent = 'Enter your name.'; err.hidden = false; return; }
+  if(mob.length < 10){ err.textContent = 'Enter a 10-digit mobile number.'; err.hidden = false; return; }
+  err.hidden = true;
+  var exam = (document.querySelector('input[name=exam]:checked')||{}).value || 'SSC';
+  var msg = 'Hi Pioneer Academy, I want to book a free demo class.\nName: ' + name + '\nMobile: ' + mob + '\nExam: ' + exam;
+  var a = document.createElement('a');
+  a.href = 'https://wa.me/919311775461?text=' + encodeURIComponent(msg);
+  a.target = '_blank'; a.rel = 'noopener';
+  document.body.appendChild(a); a.click(); a.remove();
+  document.getElementById('send').textContent = 'Opened WhatsApp — tap Send there';
+});
+</script>
+
+</body>
+</html>
