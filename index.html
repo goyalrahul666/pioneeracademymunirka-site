@@ -319,6 +319,33 @@ document.getElementById('f').addEventListener('submit', function(e){
 </script>
 
 <script>
+/* Exam-specific landing: ?exam=ssc|bank|defence|police|teaching swaps the headline
+   so each ad group lands on a page that matches its search. Default page is unchanged. */
+(function(){
+  var P = {
+    ssc:      {hi:'SSC की तैयारी, Munirka में', h:'SSC coaching in <em>Munirka</em>', l:'CGL, CHSL, CPO, MTS, GD and Railway NTPC classroom coaching near Bank of Baroda, Munirka since 2014.', r:'ex-ssc', c:'SSC'},
+    bank:     {hi:'बैंक परीक्षा की तैयारी, Munirka में', h:'Bank exam coaching in <em>Munirka</em>', l:'IBPS PO, IBPS Clerk, SBI PO and SBI Clerk prelims and mains coaching near Bank of Baroda, Munirka since 2014.', r:'ex-bank', c:'Banking'},
+    defence:  {hi:'NDA / CDS की तैयारी, Munirka में', h:'NDA &amp; CDS coaching in <em>Munirka</em>', l:'NDA, CDS and Airforce X/Y written exam coaching near Bank of Baroda, Munirka since 2014.', r:'ex-def', c:'Defence'},
+    police:   {hi:'पुलिस भर्ती की तैयारी, Munirka में', h:'Delhi Police coaching in <em>Munirka</em>', l:'Delhi Police, UP Police and Haryana Police written exam coaching near Bank of Baroda, Munirka since 2014.', r:'ex-pol', c:'Police'},
+    teaching: {hi:'शिक्षक भर्ती की तैयारी, Munirka में', h:'DSSSB &amp; CTET coaching in <em>Munirka</em>', l:'DSSSB, CTET and KVS teacher exam coaching near Bank of Baroda, Munirka since 2014.', r:'ex-tch', c:'Teaching'}
+  };
+  var k = (new URLSearchParams(location.search).get('exam')||'').toLowerCase(), p = P[k];
+  if(!p) return;
+  var hero = document.querySelector('.hero');
+  hero.querySelector('.hindi').textContent = p.hi;
+  hero.querySelector('h1').innerHTML = p.h;
+  hero.querySelector('.lede').textContent = p.l + ' Expert faculty, regular mock tests and personal mentoring, in Hindi and English medium.';
+  document.title = p.h.replace(/<[^>]+>/g,'').replace('&amp;','&') + ', Delhi | Pioneer Academy';
+  var r = document.getElementById(p.r); if(r) r.checked = true;
+  var wa = 'https://wa.me/919311775461?text=' + encodeURIComponent('Hi Pioneer Academy, I want details about your ' + p.c + ' batches.');
+  document.querySelectorAll('a[href*="wa.me/"]').forEach(function(a){ a.href = wa; });
+  document.querySelectorAll('#courses .q h3').forEach(function(h){
+    if(h.textContent.trim() === p.c){ var q = h.parentNode; q.classList.add('special'); q.parentNode.insertBefore(q, q.parentNode.firstChild); }
+  });
+})();
+</script>
+
+<script>
 /* Google Ads conversions: one event per tap on any call or WhatsApp link */
 (function(){
   var CALL='AW-11293037324/IZjjCKy0prEdEIym-Igq', WA='AW-11293037324/jZTtCN_YpbEdEIym-Igq';
